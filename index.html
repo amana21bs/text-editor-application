@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Web Text Editor</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="toolbar">
+      <button onclick="formatText('bold')" title="Bold"><b>B</b></button>
+      <button onclick="formatText('underline')" title="Underline"><u>U</u></button>
+      <button onclick="formatText('italic')" title="Italic"><i>I</i></button>
+      <input type="color" id="colorPicker" title="Font Color" onchange="changeColor(this.value)">
+      <button onclick="formatText('justifyLeft')" title="Align Left">Left</button>
+      <button onclick="formatText('justifyCenter')" title="Align Center">Center</button>
+      <button onclick="formatText('justifyRight')" title="Align Right">Right</button>
+      <button onclick="formatText('justifyFull')" title="Justify">Justify</button>
+      <button onclick="formatText('undo')" title="Undo">Undo</button>
+      <button onclick="formatText('redo')" title="Redo">Redo</button>
+    </div>
+
+    <div id="editor" contenteditable="true" spellcheck="false">
+      Start typing here...
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
